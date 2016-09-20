@@ -1,57 +1,1417 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Xiaomi by zmydream</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Xiaomi</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/zmydream/xiaomi" class="btn">View on GitHub</a>
-      <a href="https://github.com/zmydream/xiaomi/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/zmydream/xiaomi/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小米商城-小米官方网站</title>
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 首部 -->
+	<header>
+		<div class="hd">
+			<div class="header_1">
+				<div class="h1"><a href="#"id="xmw">小米商城</a><span>|</span></div>
+				<div class="h1"><a href="#">MIUI</a><span>|</span></div>
+				<div class="h1"><a href="#">米聊</a><span>|</span></div>
+				<div class="h1"><a href="#">游戏</a><span>|</span></div>
+				<div class="h1"><a href="#">多看阅读</a><span>|</span></div>
+				<div class="h1"><a href="#">云服务</a><span>|</span></div>
+				<div class="h1"><a href="#">小米移动版</a><span>|</span></div>
+				<div class="h1"><a href="#">问题反馈</a><span>|</span></div>
+				<div class="h1"><a href="#">Select Region</a></div>
+				<div id="shopping">
+					<div class="h2" onmouseover="shoppingShow()" onmouseout="shoppingHide()">
+						<a href="#" id="shp1">购物车（0）</a>
+					</div>
+					<div id="header_2"">购物车中还没有商品，赶紧选购吧！</div>
+				</div>
+				<div class="h2"><a href="#">注册</a></div>
+				<div class="h2"><a href="#">登录</a><span>|</span></div>
+			</div>
+		</div>
+	</header>
 
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+	<!--导航部分-->
+	<nav>
+		<div id="produce">
+			<img src="images/v1.jpg"/>
+			<div id="img_gif"><img src="img/head_mi5.gif" alt=""></div>
+			<ul onmouseout="proHideall()">
+				<li onmouseover="proShow1('p1')">小米手机</li>
+				<li onmouseover="proShow1('p2')">红米</li>
+				<li onmouseover="proShow1('p3')">平板.笔记本</li>
+				<li onmouseover="proShow1('p4')">电视</li>
+				<li onmouseover="proShow1('p5')">电视.影音</li>
+				<li onmouseover="proShow1('p6')">路由器</li>
+				<li onmouseover="proShow1('p7')">智能硬件</li>
+				<li>服务</li>
+				<li>社区</li>
+			</ul>
+			<div id="search" onclick = "listShow('block')" >
+				<div id="search1">
+					<a href="#" id="simg"></a>
+					<div id="seh">
+						<span id="s1">小米笔记本Air</span>
+						<span id="s1">红米pro</span>
+					</div>
+					<form action="">
+						<input type="text" id="inputsearch" />
+					</form>
+				</div>
+				<div id="searchlist">
+					<ul>
+						<li><a href="#"><span class="s1">智能硬件</span><span class="s2">约有35件</span></a></li>
+						<li><a href="#"><span class="s1">wifi</span><span class="s2">约有12件</span></li>
+						<li><a href="#"><span class="s1">自拍杆</span><span class="s2">约有7件</span></a></li>
+						<li><a href="#"><span class="s1">移动电源</span><span class="s2">约有27件</span></a></li>
+						<li><a href="#"><span class="s1">随身风扇</span><span class="s2">约有3件</span></a></li>
+						<li><a href="#"><span class="s1">个性配件</span><span class="s2">约有96件</span></a></li>
+						<li><a href="#"><span class="s1">充电设备</span><span class="s2">约有29件</span></a></li>
+						<li><a href="#"><span class="s1">存储卡</span><span class="s2">约有12件</span></a></li>
+						<li><a href="#"><span class="s1">配件优惠套装</span><span class="s2">约有11件</span></a></li>	
+					</ul>
+				</div>
+			</div>
+			<!--白色背景部分的主要内容-->
+			<div onmouseover="proShow1('p1')" onmouseout="proHideall()" id="p1" class="tucil">
+				<div class="autoimg">
+					<ul class="autoimg">
+		   	    <li style="border-left:0px;"><img src="img/navsel01.png" alt="" /></li>
+		   	    <li><img src="img/navsel02.png" alt="" /></li>
+		   	    <li><img src="img/navsel03.png" alt="" /></li>
+					</ul>
+			    <ul class="autotext">
+			   	  <li>小米MAX<br/><span>1299元起</span></li>
+			   	  <li>小米手机5<br/><span>1999元起</span></li>
+			   	  <li>小米手机4<br/><span>1099元起</span></li>
+					</ul>
+				</div>
+			</div>
+			<div onmouseover="proShow1('p2')" onmouseout="proHideall()" id="p2" class="tucil"><img src="images/navv02.png"/></div>
+			<div onmouseover="proShow1('p3')" onmouseout="proHideall()" id="p3" class="tucil"><img src="images/navv03.png"/></div>
+			<div onmouseover="proShow1('p4')" onmouseout="proHideall()" id="p4" class="tucil"><img src="images/navv04.png"/></div>
+			<div onmouseover="proShow1('p5')" onmouseout="proHideall()" id="p5" class="tucil"><img src="images/navv05.png"/></div>
+			<div onmouseover="proShow1('p6')" onmouseout="proHideall()" id="p6" class="tucil"><img src="images/navv06.png"/></div>
+			<div onmouseover="proShow1('p7')" onmouseout="proHideall()" id="p7" class="tucil"><img src="images/navv07.png"/></div>
+		</div>
+	</nav>
+	
+	<section>
+	<!-- 图片轮播加左列表 -->
+	  <!-- 第一行 -->
+		<div id="imgCarousel">
+			<div id="imgCul" onmouseover="hide()" onmouseout="show()">
+			  <div id="btnleft" onclick="proShow2()"></div>
+			  <div class="lun"><img id="imgone" src="images/s1.jpg"/></div>
+			  <div id="btnright" onclick="nextShow()"></div>
+			</div>
+			<ul id="nav">
+				<li class = "cur" onmouseover="navShow('1')" onmouseout="show()"></li>
+				<li onmouseover="navShow('2')" onmouseout="show()"></li>
+				<li onmouseover="navShow('3')" onmouseout="show()"></li>
+				<li onmouseover="navShow('4')" onmouseout="show()"></li>
+				<li onmouseover="navShow('5')" onmouseout="show()"></li>
+			</ul>
+		
+		  <div id="lo"></div>
+			<div id="rightUl">
+				<ul id="rtul">
+					<li onmouseover="porty('block','phone')" onmouseout="porty('none','phone')">
+						<i>手机 平板  电话卡</i><b>></b>
+						<div class="xiangqing" id="phone">
+							<img src="img/ss_xiang01.png" alt="" />
+						</div>
+					</li>
+					<li onmouseover="porty('block','notebook')" onmouseout="porty('none','notebook')">
+						<i>笔记本</i><b>></b>
+						<ul class="xiangqing" id="notebook">
+							<li><span><img src="img/sss_xiang01.png" alt="" /><strong>小米笔记本Air</strong></span><button>选购</button></li>
+							<li><span><img src="img/sss_xiang02.png" alt="" /><strong>USB-C转接器</strong></span></li>
+						</ul>
+					</li>
+					<li onmouseover="porty('block','teleview')" onmouseout="porty('none','teleview')">
+						<i>电视 盒子</i><b>></b>
+						<div class="xiangqing" id="teleview">
+							<img src="img/ss_xiang02.png" alt="" />
+						</div>
+					</li>
+					<li onmouseover="porty('block','lu')" onmouseout="porty('none','lu')">
+					  <i>路由器 智能软件</i><b>></b>
+						<div class="xiangqing" id="lu">
+							<img src="img/ss_xiang05.png" alt="" />
+						</div>
+					</li>
+					<li onmouseover="porty('block','dian')" onmouseout="porty('none','dian')">
+					  <i>移动电源 电池 插线板</i><b>></b>
+						<div class="xiangqing" id="dian">
+							<img src="img/ss_xiang04.png" alt="" />
+						</div>
+					</li>
+					<li onmouseover="porty('block','er')" onmouseout="porty('none','er')">
+					  <i>耳机 音箱</i><b>></b>
+						<div class="xiangqing" id="er">
+							<img src="img/ss_xiang06.png" alt="" />
+						</div>
+					</li>
+					<li onmouseover="porty('block','xian')" onmouseout="porty('none','xian')">
+					  <i>线材 支架 存储卡</i><b>></b>
+						<div class="xiangqing" id="xian">
+							<img src="img/ss_xiang08.png" alt="" />
+						</div>
+					</li>
+					<li onmouseover="porty('block','tie')" onmouseout="porty('none','tie')">
+					  <i>贴膜 其他配件</i><b>></b>
+						<div class="xiangqing" id="tie">
+							<img src="img/ss_xiang021.png" alt="" />
+						</div>
+					</li>
+					<li onmouseover="porty('block','mitwo1')" onmouseout="porty('none','mitwo1')">
+					  <i>米兔 服装</i><b>></b>
+						<div class="xiangqing" id="mitwo1">
+							<img src="img/ss_xiang09.png" alt="" />
+						</div>
+					</li>
+					<li onmouseover="porty('block','beibao1')" onmouseout="porty('none','beibao1')">
+					  <i>背包 其他周边</i><b>></b>
+						<div class="xiangqing" id="beibao1">
+							<img src="img/ss_xiang03.png" alt="" />
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 第二行 -->
+		<div id="twoimg">
+			<div id="twoimg1">
+				<a href="#" class="dianxin"></a>
+				<a href="#" class="tuango"></a>
+				<a href="#" class="guanfan"></a>
+				<a href="#" class="move"></a>
+				<a href="#" class="new"></a>
+				<a href="#" class="well"></a>
+			</div>
+			<div id="twoimg2">
+				<img src="img/ss03.png"/>
+				<img src="img/ss02.png"/>
+				<img src="img/ss01.png"/>
+			</div>
+		</div>
+		<!-- 小米明星单品 -->
+		<div id="Single_product">
+			<div id="Sp1">
+				<strong>小米明星单品</strong>
+				<p>
+					<button style="border-right:0px;" class="left_disable" id="left_sp" onclick="left_sp()" onmouseover="actionstop()"onmouseout="actionnext()"><</button>
+					<button style="border-right:0px;" class="right_sp" id="right_sp" onclick="right_sp()" onmouseover="actionstop()"onmouseout="actionnext()">></button>
+				</p>
+			</div>
+			<div class="Sp_prd">
+				<div id="Sp_prd1">
+			    <img src="img/sec401.png"/>
+					<img src="img/sec402.png"/>
+					<img src="img/sec403.png"/>
+					<img src="img/sec404.png"/>
+					<img src="img/sec405.png"/>
+		  		<img src="img/sec406.png"/>
+					<img src="img/sec407.png"/>
+					<img src="img/sec408.png"/>
+					<img src="img/sec409.png"/>
+					<img src="img/sec4010.png"/>	
+				</div>
+			</div>
+		</div>
+	</section>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+	<!-- 灰色背景部分的主要内容 -->
+	<div id="graybj">
+		<div style="width:1318px; margin:0 auto;">
+			<!-- 智能硬件 -->
+			<div id="graybj_one">
+				<div>
+					<strong>智能硬件</strong>
+					<a href="#" id="graybjone_a">查看全部</a>
+				</div>
+				<div id="graybjone_1">
+					<div id="graybjone_1_1">
+					  <img src="images/sec5.png"/>
+				  </div>
+				  <div id="graybjone_1_2">
+						<img src="images/sec51.jpg"/>
+						<img src="images/sec52.jpg"/>
+						<img src="images/sec53.jpg"/>
+						<img src="images/sec54.jpg"/>
+						<img src="images/sec55.jpg"/>
+						<img src="images/sec56.jpg"/>
+						<img src="images/sec57.jpg"/>
+						<img src="images/sec58.jpg"/>
+				  </div>
+				</div>
+			</div>
+			<!-- 搭配 -->
+			<div id="graybj_two">
+				<div>
+					<strong>搭配</strong>
+					<ul id="graybj_ul">
+						<li class="graycur">热门</li>
+						<li>耳机音响</li>
+						<li>电源</li>
+						<li>电池存储卡</li>
+					</ul>
+				</div>
+				<div id="graybjtwo_1">
+					<div id="graybjtwo_1_1">
+						<img src="images/sec62.png"/>
+						<img src="images/sec62 (1).png"/>
+					</div>
+					<div id="graybjtwo_1_2">
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+						<div id="graybjtwo_1_2_1" class="gbt_all">
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sec611.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>移动电源好用，不错</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sec612.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>不喜欢这种类型的耳机，戴着难受。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sec613.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>音箱很不错，给我妈买来跳广场舞的。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img id="sec632" src="images/sec614.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>东西不错，为什么没有红色的。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sec615.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>女生必备的神器</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sec616.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>这个耳机比上面那个好，我喜欢这种。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sec617.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>移动电源还是要备一个滴。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+							<span id="span_1_2_1_all">
+							  	<img src="images/sec618.jpg"/>
+							    <img src="images/sec619.jpg"/>
+						  </span>
+						</div>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+						<div id="graybjtwo_1_2_1" class="gbt_all">
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/secl1.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>这个耳机戴着蛮舒服的。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/secl2.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>不喜欢这种耳机。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/secl3.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>这种耳机不错，就是容易掉。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img class="sec632" src="images/secl4.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>不喜欢这种耳机。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/secl5.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>耳机质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/secl6.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>音箱质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/secl7.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>音箱质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+							<span id="span_1_2_1_all">
+						  	<img src="images/secl8.jpg"/>
+						    <img src="images/secl9.jpg"/>
+							</span>
+						</div>
+						<div id="graybjtwo_1_2_1" class="gbt_all">
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sw1.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sw2.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sw3.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img class="sec632" src="images/sw4.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sw5.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sw6.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sw7.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+							<span id="span_1_2_1_all">
+						  	<img src="images/sw8.jpg"/>
+								<img src="images/sw9.jpg"/>
+						  </span>
+					  </div>
+					  <div id="graybjtwo_1_2_1" class="gbt_all">
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sr1.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sr2.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sr3.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img class="sec632" src="images/sr4.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sr5.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sr6.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+						  <span id="graybjtwo_1_2_show">
+						  	<img src="images/sr7.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </span>
+							<span id="span_1_2_1_all">
+						  	<img src="images/sr8.jpg"/>
+							  <img src="images/sr9.jpg"/>	
+							</sapn>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<!-- 配件 -->
+			<div id="graybj_three">
+			  <div>
+			  	<strong>配件</strong>
+					<ul id="graybjthree_ul">
+						<li class="graycur">热门</li>
+						<li>保护套</li>
+						<li>贴膜</li>
+						<li>其他配件</li>
+					</ul>
+			  </div>
+				<div id="graybjthree_1">
 
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+					<div id="graybjthree_1_1">
+						<img src="images/sec71.png"/>
+						<img src="images/sec72.png"/>
+					</div>
+					<div id="graybjthree_1_2">
+						<div id="graybjthree_1_2_1">
+						  <div class="graybjthree_p">
+						  	<img src="img/r_a1.jpg" alt="">
+						  	<p id="name">小米自拍杆</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">7.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/r_a2.jpg" alt="">
+						  	<p id="name">青米USB快速充电数据线</p>
+						  	<p id="price">14.9元</p>
+						  	<p id="math">1.5万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/r_a3.jpg" alt="">
+						  	<p id="name">小米随身WIFI</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/r_a4.jpg" alt="">
+						  	<p id="name">功夫米兔手机支架</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/r_b1.jpg" alt="">
+						  	<p id="name">苹果Lightning to USB数据线</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/r_b2.jpg" alt="">
+						  	<p id="name">ZMI无限拓展数据线120cm</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/r_b3.jpg" alt="">
+						  	<p id="name">小米手机5 钢化玻璃贴膜(0.22mm)</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						    <div class="p">
+						      <span>标准钢化玻...</span>
+						      <img src="img/r_b4.jpg" alt="">
+						      <span class="many">12元</span>	 
+						    </div>
+						    <div class="p1">
+						      <span class="big">浏览更多</span>
+						      <img src="img/r_b5.png" alt="">
+						      <span class="many">热门</span>	 
+						    </div>	
+						  </div>
+						</div>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+						<div id="graybjthree_1_2_1" >
+						  <div class="graybjthree_p">
+						  	<img src="img/t_a1.jpg" alt="">
+						  	<p id="name">小米手机5 智能翻盖保护套</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">7.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/t_a2.jpg" alt="">
+						  	<p id="name">小米Max 智能显示保护套</p>
+						  	<p id="price">14.9元</p>
+						  	<p id="math">1.5万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/t_a3.jpg" alt="">
+						  	<p id="name">红米Pro 智能显示保护套</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/t_a4.jpg" alt="">
+						  	<p id="name">红米3高配版 炫彩翻盖保护套</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/t_b1.jpg" alt="">
+						  	<p id="name">红米Note3 炫彩翻页保护套</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/t_b2.jpg" alt="">
+						  	<p id="name">红米3标准版 炫彩翻页保护套</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/t_b3.jpg" alt="">
+						  	<p id="name">小米手机4 智能唤醒翻盖保护套</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						    <div class="p">
+						      <span>平板2保护套</span>
+						      <img src="img/t_b4.jpg" alt="">
+						      <span class="many">12元</span>	 
+						    </div>
+						    <div class="p1">
+						      <span class="big">浏览更多</span>
+						      <img src="img/t_b5.png" alt="">
+						      <span class="many">保护套</span>	 
+						    </div>	
+						  </div>
+						</div>
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+						<div id="graybjthree_1_2_1" >
+						  <div class="graybjthree_p">
+						  	<img src="img/tm_a1.jpg" alt="">
+						  	<p id="name">小米手机5 极薄防蓝光贴膜</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">7.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/tm_a2.jpg" alt="">
+						  	<p id="name">小米Max 标准高透贴膜</p>
+						  	<p id="price">14.9元</p>
+						  	<p id="math">1.5万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/tm_a3.jpg" alt="">
+						  	<p id="name">小米平板2 标准高透贴膜</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/tm_a4.jpg" alt="">
+						  	<p id="name">红米Note3 钢化玻璃膜</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/tm_b1.jpg" alt="">
+						  	<p id="name">红米手机3 钢化玻璃膜</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/tm_b2.jpg" alt="">
+						  	<p id="name">小米手机5 钢化玻璃贴膜</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/tm_b3.jpg" alt="">
+						  	<p id="name">红米Pro 标准高透贴膜</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						    <div class="p">
+						      <span>小米手机5...</span>
+						      <img src="img/tm_b4.jpg" alt="">
+						      <span class="many">12元</span>	 
+						    </div>
+						    <div class="p1">
+						      <span class="big">浏览更多</span>
+						      <img src="img/tm_b5.png" alt="">
+						      <span class="many">贴膜</span>	 
+						    </div>	
+						  </div>
+						</div>
 
-<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+						<div id="graybjthree_1_2_1" >
+						  <div class="graybjthree_p">
+						  	<img src="img/tq_a1.jpg" alt="">
+						  	<p id="name">小米蓝牙遥控器</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">7.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/tq_a2.jpg" alt="">
+						  	<p id="name">指环式防滑手机支架</p>
+						  	<p id="price">14.9元</p>
+						  	<p id="math">1.5万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/tq_a3.jpg" alt="">
+						  	<p id="name">小米蓝牙手柄</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/tq_a4.jpg" alt="">
+						  	<p id="name">蓝牙语音体感遥控器</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/tq_b1.jpg" alt="">
+						  	<p id="name">手机USB Type-C数据线</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/tq_b2.jpg" alt="">
+						  	<p id="name">小米前兆网线</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						  	<img src="img/tq_b3.jpg" alt="">
+						  	<p id="name">ZMI无线拓展数据线</p>
+						  	<p id="price">49元</p>
+						  	<p id="math">1.7万人评价</p>
+						  </div>
+						  <div class="graybjthree_p">
+						    <div class="p">
+						      <span>青米USB快...</span>
+						      <img src="img/tq_b4.jpg" alt="">
+						      <span class="many">12元</span>	 
+						    </div>
+						    <div class="p1">
+						      <span class="big">浏览更多</span>
+						      <img src="img/tq_b5.png" alt="">
+						      <span class="many">其他配件</span>	 
+						    </div>	
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 周边 -->
+			<div id="graybj_four">
+				<div>
+					<strong>周边</strong>
+					<ul id="graybjfour_ul">
+						<li class="graycur">热门</li>
+						<li>服装</li>
+						<li>米兔</li>
+						<li>生活周边</li>
+						<li>箱包</li>
+					</ul>
+				</div>
+				<div id="graybjfour_1">
+					<div id="graybjfour_1_1">
+						<img src="images/sec81.png"/>
+						<img src="images/sec82.png"/>
+					</div>
+					<div id="graybjfour_1_2">
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+						<span id="graybjfour_1_2_1">
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec51.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>智能摄像机，感觉很吊。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec52.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>运动相机感觉不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec53.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>路由器效果还行。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec54.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>女生要管好体重。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec55.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>智能插座，感觉不到什么智能啊。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec56.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>送爸妈的，样式也不错。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec57.jpg"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>我们村里人不用买。</p>
+							   	 <div>来自于&nbsp;小漆&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>	
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m7.png"/>
+						  	<img src="images/sec_m8.png"/>
+						  </div>
+						</span>
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+						<span id="graybjfour_1_2_1">
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m11.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m22.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>质量很好，颜色亮丽，太喜欢了，时尚时尚，最时尚。</p>
+							   	 <div>来自于&nbsp;小红帽0809&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m33.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m44.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m55.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m66.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m77.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m7.png"/>
+						  	<img src="images/sec_m8.png"/>
+						  </div>
+						</span>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/zmydream/xiaomi">Xiaomi</a> is maintained by <a href="https://github.com/zmydream">zmydream</a>.</span>
+						<span id="graybjfour_1_2_1">
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m111.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m222.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>质量很好，颜色亮丽，太喜欢了，时尚时尚，最时尚。</p>
+							   	 <div>来自于&nbsp;小红帽0809&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m333.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m444.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m555.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m666.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m777.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m888.png"/>
+						  	<img src="images/sec_m999.png"/>
+						  </div>
+						</span>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+						<span id="graybjfour_1_2_1">
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m1.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m2.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>质量很好，颜色亮丽，太喜欢了，时尚时尚，最时尚。</p>
+							   	 <div>来自于&nbsp;小红帽0809&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m3.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m4.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m5.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m6.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m9.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m7.png"/>
+						  	<img src="images/sec_m8.png"/>
+						  </div>
+						</span>
 
-    </section>
+						<span id="graybjfour_1_2_1">
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m1111.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m2222.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>质量很好，颜色亮丽，太喜欢了，时尚时尚，最时尚。</p>
+							   	 <div>来自于&nbsp;小红帽0809&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m3333.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m4444.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m5555.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m6666.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m7777.png"/>
+						  	<div class="show">
+						  		<div class="show1">
+							   	 <p>衣服质量不错，样式也不错。</p>
+							   	 <div>来自于&nbsp;李伯强&nbsp;的评论</div>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div id="graybjfour_1_2_show">
+						  	<img src="images/sec_m8888.png"/>
+						  	<img src="images/sec_m9999.png"/>
+						  </div>
+						</span>
 
-  
-  </body>
+					</div>
+				</div>
+			</div>
+			<!-- 为你推荐 -->
+			<div id="graybj_five">
+				<div id="graybjfive_1">
+					<strong>为你推荐</strong>
+				  <p>
+						<button style="border-right:0px;" class="left_disables" id="left_sps" onclick="graybjfive(this)"><</button>
+						<button style="border-right:0px;" class="right_sps" id="right_sps" onclick="graybjfive(this)">></button>
+				  </p>
+				</div>
+
+				<div id="graybjfive_2">
+				  <div id="graybjfive_2_1">	
+					  <img style="margin-left:0px;"src='img/sec901.png'"/>
+					  <img style="margin-left:3px;"src='img/sec902.png'"/>
+					  <img src="img/sec903.png"/>
+					  <img src="img/sec904.png"/>
+				  </div>
+			  </div>
+			</div>
+			<!-- 热评产品 -->
+			<div id="graybj_six">
+				<div id="graybjsix_1">
+					<strong>热评产品</strong>
+				</div>
+
+				<div id="graybjsix_2">
+				  <img src="images/sec10a (1).png"/>
+				  <img src="images/sec10a (2).png"/>
+				  <img src="images/sec10a (3).png"/>
+				  <img src="images/sec10a (4).png"/>
+			  </div>
+			</div>
+			<!-- 内容 -->
+			<div id="graybj_seven">
+				<div id="graybjseven_1">
+					<strong>内容</strong>
+				</div>
+
+				<div id="graybjseven_2">
+
+				  <div id="graybjseven_2_1">
+				    <button id="left_span_1"><</button>
+				    <button id="right_span_1">></button>
+				  	<div id="graybjseven_2_1_1">
+				  	  <img src="img/change_1.png" alt="">
+					  	<img src="img/change_2.png" alt="">
+					  	<img src="img/change_3.png" alt="">
+					  	<img src="img/change_4.png" alt="">
+				  	</div>
+				  </div>
+
+				  <div id="graybjseven_2_1">
+				    <button id="left_span_2"><</button>
+				    <button id="right_span_2">></button>
+				  	<div id="graybjseven_2_1_2">
+				  	  <img src="img/change_12.png" alt="">
+					  	<img src="img/change_22.png" alt="">
+					  	<img src="img/change_32.png" alt="">
+					  	<img src="img/change_42.png" alt="">
+				  	</div>
+				  </div>
+
+				  <div id="graybjseven_2_1">
+				    <button id="left_span_3"><</button>
+				    <button id="right_span_3">></button>
+				  	<div id="graybjseven_2_1_3">
+				  	  <img src="img/change_13.png" alt="">
+					  	<img src="img/change_23.png" alt="">
+					  	<img src="img/change_33.png" alt="">
+					  	<img src="img/change_43.png" alt="">
+				  	</div>
+				  </div>
+
+				  <div id="graybjseven_2_1">
+				    <button id="left_span_4"><</button>
+				    <button id="right_span_4">></button>
+				  	<div id="graybjseven_2_1_4">
+				  	  <img src="img/change_14.png" alt="">
+					  	<img src="img/change_24.png" alt="">
+					  	<img src="img/change_34.png" alt="">
+					  	<img src="img/change_44.png" alt="">
+				  	</div>
+				  </div>
+			  </div>
+			</div>
+      <!-- 视频 -->
+			<div id="graybj_eight">
+				<div>
+					<strong>视频</strong>
+					<a href="#" id="graybjeight_a">查看全部</a>
+				</div>
+			  <div id="graybjeight_1">
+			    	<img id="graybjeight_1_1" src="images/secs1 (1).png">
+			      <div id ="video_1">
+			    		<div class="conter">
+			    		  <div id="head_video">
+			    		    <p>红米年度品牌视频</p><span id="exit_1">x</span>
+			    		  </div>
+			    			<div class="looking">
+			    			  <embed class="youku" src="https://players.youku.com/player.php/sid/XMTY1ODg5ODA0MA/isAutoPlay/false/partnerid/91a0d45b32079123/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+			    			</div>
+			    		</div>
+			    	</div>
+			    <img id="graybjeight_1_2" src="images/secs1 (2).png"> 
+			      <div id ="video_2">
+			    		<div class="conter">
+			    		  <div id="head_video">
+			    		    <p>小米笔记本Air最全介绍视频</p><span id="exit_2">x</span>
+			    		  </div>
+			    			<div class="looking">
+			    			  <embed class="youku" src="https://players.youku.com/player.php/sid/XMTY1OTg3NjQ4OA/isAutoPlay/false/partnerid/91a0d45b32079123/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+			    			</div>
+			    		</div>
+			    	</div>
+			    <img id="graybjeight_1_3" src="images/secs1 (3).png">
+			      <div id ="video_3">
+			    		<div class="conter">
+			    		  <div id="head_video">
+			    		    <p>小米笔记本Air可靠性测试视频</p><span id="exit_3">x</span>
+			    		  </div>
+			    			<div class="looking">
+			    			  <embed class="youku" src="https://players.youku.com/player.php/sid/XMTY1OTg4NjY0OA/isAutoPlay/false/partnerid/91a0d45b32079123/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+			    			</div>
+			    		</div>
+			    	</div> 
+			    <img id="graybjeight_1_4" src="images/secs1 (4).png">
+			      <div id ="video_4">
+			    		<div class="conter">
+			    		  <div id="head_video">
+			    		    <p>小米Max绝美外观视频</p><span id="exit_4">x</span>
+			    		  </div>
+			    			<div class="looking">
+			    			  <embed class="youku" src="https://players.youku.com/player.php/sid/XMTU2NDM3NjEzMg/isAutoPlay/false/partnerid/91a0d45b32079123/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+			    			</div>
+			    		</div>
+			    	</div> 
+			  </div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<div id="footer">
+		<div id="ftone_1">
+			<ul class="ftone">
+				<li  class="sever">1小时快修服务</li>
+				<li  class="return">7天无理由退货</li>
+				<li  class="barter">15天免费换货</li>
+				<li  class="shipping">满150元包邮</li>
+				<li  class="after_sale" style="border-right:0px;">520余家售后网点</li>
+			</ul>
+		</div>
+		<div class="fttwo">
+			<dl>
+				<dt>帮助中心</dt>
+				<dd><a href="">账户管理</a></dd>
+				<dd><a href="">购物指南</a></dd>
+				<dd><a href="">订单操作</a></dd>
+			</dl>
+			<dl>
+				<dt>服务中心</dt>
+				<dd><a href="">售后政策</a></dd>
+				<dd><a href="">自助服务</a></dd>
+				<dd><a href="">相关下载</a></dd>
+			</dl>
+			<dl>
+				<dt>线下门店</dt>
+				<dd><a href="">小米之家</a></dd>
+				<dd><a href="">服务网点</a></dd>
+				<dd><a href="">零售网点</a></dd>
+			</dl>
+			<dl>
+				<dt>关于小米</dt>
+				<dd><a href="">了解小米</a></dd>
+				<dd><a href="">加入小米</a></dd>
+				<dd><a href="">联系我们</a></dd>
+			</dl>
+			<dl>
+				<dt>关注我们</dt>
+				<dd><a href="">新浪微博</a></dd>
+				<dd><a href="">小米部落</a></dd>
+				<dd><a href="">官方微信</a></dd>
+			</dl>
+			<dl id="dl">
+				<dt>特色服务</dt>
+				<dd><a href="">E码通道</a></dd>
+				<dd><a href="">小米移动</a></dd>
+				<dd><a href="">防伪查询</a></dd>
+			</dl>
+			<div id="phone">
+				<p class="phone">400-100-5678</p>
+				<p>
+					<span>
+					  周一至周日 8:00-18:00 
+					  <br/>
+           （仅收市话费）
+          </span>
+          <br/>
+					<a href="" class="btn">24小时在线客服</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="footerend">
+		<div  style="width:1318px;margin:0 auto;">
+			<div  class="areius" >
+				<img src="img/footer7.png" alt="" />
+				<ul>
+					<li>
+						<ul class="ftendone">
+							<li><a href="#">小米商城</a><span></span></li>
+							<li><a href="#">MIUI</a><span></span></li>
+							<li><a href="#">米聊</a><span></span></li>
+							<li><a href="#">多看书城</a><span></span></li>
+							<li><a href="#">小米路由器</a><span></span></li>
+							<li><a href="#">视频电话</a><span></span></li>
+							<li><a href="#">小米后院</a><span></span></li>
+							<li><a href="#">小米天猫店</a><span></span></li>
+							<li><a href="#">小米淘宝直营店</a><span></span></li>
+							<li><a href="#">小米网盟</a><span></span></li>
+							<li><a href="#">问题反馈</a><span></span></li>
+							<li><a href="#">Select Region</a></li>
+						</ul>
+					</li>
+					<li class="ftendtwo">
+						&copy;<a href="#">mi.com</a> 京ICP证110507号 京ICP备10046444号 <a href="#">京公网安备11010802020134号</a> <a href="#">京网文[2014]0059-0009号</a>
+					</li>
+					<li class="ftendtwo">
+						违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+					</li>
+				</ul>
+				<div class="areius_fend">
+					<img src="img/fend1.png" alt="" />
+					<img src="img/fend2.png" alt="" />
+					<img src="img/fend3.png" alt="" />
+					<img src="img/fend4.png" alt="" />
+				</div>
+			</div>
+			<div class="areiusnext" >
+				  探索黑科技，小米为发烧而生！
+			</div>
+		</div>
+    </div>
+
+	<script src="js/xiaomi.js"></script>
+	<script src="js/xiaomi_img_lunbo.js"></script>
+	<script src="js/xiaomi_myself.js"></script>
+</body>
 </html>
